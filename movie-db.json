@@ -1,0 +1,20 @@
+[
+    {
+        "name": "It",
+        "director": "Andy Muschietti",
+        "writer": ["Chase Palmer","Cary Fukunaga","Gary Dauberman", "Stephen King"],
+        "year": "2017"
+    },
+    {
+        "name": "Home Again",
+        "director": "Hallie Meyers-Shyer",
+        "writer": ["Hallie Meyers-Shyer"],
+        "year": "2017"
+    },
+    {
+        "name": "Rememory",
+        "director": "Mark Palansky",
+        "writer": ["Mark Palansky", "Mike Vukadinovich"],
+        "year": "2017"
+    }
+]

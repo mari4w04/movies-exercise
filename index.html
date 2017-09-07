@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <section></section>
+
+    <template class="movie">
+        <article class="list-product">
+            <h2>Name</h2>
+            <h1>Director</h1>
+            <h3>Writers</h3>
+            <h4>Year</h4>
+            <hr>
+        </article>
+    </template>
+
+    <script>
+        let movieLink = "movie-db.json";
+        let template = document.querySelector('.movie').content;
+        let section = document.querySelector('section');
+        function getData(link){
+                fetch(link).then(function(response){
+                    return response.json();
+                }).then(function(json){
+                    return show(json);
+                });
+            }
+
+        function show(json){
+            console.log(json);
+            json.forEach(function(movie){
+                console.log(movie.name);
+                let clone = template.cloneNode(true);
+                clone.querySelector('h2').textContent="Name: " + movie.name;
+                clone.querySelector('h1').textContent="Director: " + movie.director;
+                clone.querySelector('h3').textContent="Writers: " + movie.writer;
+                clone.querySelector('h4').textContent="Year: " + movie.year;
+
+                section.appendChild(clone);
+
+            });
+
+        }
+
+
+
+        getData(movieLink);
+    </script>
+</body>
+</html>
